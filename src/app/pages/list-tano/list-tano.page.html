@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Daftar Tanaman Obat</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-searchbar
+  [formControl]="searchControl"
+  (ionChange)="onSearchInput()"></ion-searchbar>
+
+<div *ngIf="searching" class="spinner-container">
+  <ion-spinner></ion-spinner>
+</div>
+
+<ion-list>   
+  <ion-item button [routerLink]="['/detail-tano', tanoList.id]" *ngFor="let tanoList of tanoList" >
+    <ion-thumbnail slot="start">
+        <img src="{{tanoList.img}}">
+      </ion-thumbnail>
+    <ion-label>
+      <h2>{{tanoList.nama}}</h2>
+      <p>{{tanoList.namaIlmiah}}</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item *ngIf="tanoList.length <= 0 || !tanoList" >
+      <p>Data Tidak Ditemukan</p>
+  </ion-item>
+
+</ion-list>
+</ion-content>

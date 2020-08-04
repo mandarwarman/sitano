@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Daftar Pengobatan</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-searchbar
+  [formControl]="searchControl"
+  (ionChange)="onSearchInput()"
+></ion-searchbar>
+
+<div *ngIf="searching" class="spinner-container">
+  <ion-spinner></ion-spinner>
+</div>
+<ion-list>    
+  <ion-item button [routerLink]="['/pengo-detail', pengoList.id]" *ngFor="let pengoList of pengoList" >
+    {{pengoList.nama}}</ion-item>
+</ion-list>
+<ion-item *ngIf="pengoList.length <= 0 || !pengoList" >
+  <p>Data Tidak Ditemukan</p>
+</ion-item>
+</ion-content>

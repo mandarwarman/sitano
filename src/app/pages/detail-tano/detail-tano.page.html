@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">
+      {{ tano?.nama }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu/list-tano"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>  
+  <ion-img src="{{tano?.img}}"></ion-img>    
+  <p class="ilmiah"><i>{{tano?.namaIlmiah}}</i></p>
+
+  <div class="ion-text-justify">
+  <ion-text>
+    <h4>Nama Lain</h4>
+    <p>{{tano?.namaDaerah}}</p>
+  </ion-text>
+
+  <ion-text>
+    <h4>Deskripsi</h4>
+    <p>{{tano?.deskripsi}}</p>
+  </ion-text>
+  
+  <ion-text>
+    <h4>Habitat dan Penyebaran Tanaman</h4>
+    <p>{{tano?.habitat}}</p>
+  </ion-text>
+
+  <ion-text>
+    <h4>Bagian Tanaman yang Berguna</h4>
+    <p>{{tano?.bagTan}}</p>
+  </ion-text>
+  
+  <ion-text>
+    <h4>Kandungan Kimia / Farmakologi</h4>
+    <p>{{tano?.kanKi}}</p>
+  </ion-text>
+
+  <ion-text>
+      <h4>Khasiat</h4>
+      <p>{{tano?.khasiat}}</p>
+  </ion-text>
+
+  <ion-text>
+      <h4>Efek Samping</h4>
+      <p>{{tano?.efek}}</p>
+  </ion-text>
+
+  <ion-text>
+    <h4>Dapat Mengobati</h4>
+    <ion-text>
+      <h3 routerLink="{{tano?.bahanlink1}}">{{tano?.bahan1}}</h3>
+      <h3 routerLink="{{tano?.bahanlink2}}">{{tano?.bahan2}}</h3>
+      <h3 routerLink="{{tano?.bahanlink3}}">{{tano?.bahan3}}</h3>
+      <h3 routerLink="{{tano?.bahanlink4}}">{{tano?.bahan4}}</h3>
+      <h3 routerLink="{{tano?.bahanlink5}}">{{tano?.bahan5}}</h3>
+      <h3 routerLink="{{tano?.bahanlink6}}">{{tano?.bahan6}}</h3>
+      <h3 routerLink="{{tano?.bahanlink7}}">{{tano?.bahan7}}</h3>
+      <h3 routerLink="{{tano?.bahanlink8}}">{{tano?.bahan8}}</h3>
+      <h3 routerLink="{{tano?.bahanlink9}}">{{tano?.bahan9}}</h3>
+      <h3 routerLink="{{tano?.bahanlink10}}">{{tano?.bahan10}}</h3>
+    </ion-text>
+</ion-text>
+</div>
+</ion-content>

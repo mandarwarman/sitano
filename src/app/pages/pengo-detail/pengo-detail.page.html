@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">
+      {{ pengo?.nama}}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu/list-pengo"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="ion-text-justify">
+    <ion-text>    
+      <p>{{pengo?.deskripsi}}</p>
+    </ion-text>  
+
+    <ion-text>    
+      <p>Klik nama tanaman untuk melihat informasi lebih lanjut mengenai tanaman tersebut.</p>
+    </ion-text>  
+
+    <ion-text>    
+        <p>Informasi yang diberikan bukanlah pengganti nasihat medis. SELALU konsultasikan pada dokter Anda.</p>
+        <p>Resep / Cara Pengolahan penyakit {{ pengo?.nama}} Menggunakan Tanaman Obat.</p>
+      </ion-text>  
+    
+    <ion-text>
+      <h4 routerLink="{{pengo?.bahanlink1}}">{{pengo?.bahan1}}</h4>
+      <p>{{pengo?.pengob1}}</p>
+      <h4 routerLink="{{pengo?.bahanlink2}}">{{pengo?.bahan2}}</h4>
+      <p>{{pengo?.pengob2}}</p>
+      <h4 routerLink="{{pengo?.bahanlink3}}">{{pengo?.bahan3}}</h4>
+      <p>{{pengo?.pengob3}}</p>
+      <h4 routerLink="{{pengo?.bahanlink4}}">{{pengo?.bahan4}}</h4>
+      <p>{{pengo?.pengob4}}</p>
+      <h4 routerLink="{{pengo?.bahanlink5}}">{{pengo?.bahan5}}</h4>
+      <p>{{pengo?.pengob5}}</p>
+      <h4 routerLink="{{pengo?.bahanlink6}}">{{pengo?.bahan6}}</h4>
+      <p>{{pengo?.pengob6}}</p>
+      <h4 routerLink="{{pengo?.bahanlink7}}">{{pengo?.bahan7}}</h4>
+      <p>{{pengo?.pengob7}}</p>
+      <h4 routerLink="{{pengo?.bahanlink8}}">{{pengo?.bahan8}}</h4>
+      <p>{{pengo?.pengob8}}</p>
+      <h4 routerLink="{{pengo?.bahanlink9}}">{{pengo?.bahan9}}</h4>
+      <p>{{pengo?.pengob9}}</p>
+      <h4 routerLink="{{pengo?.bahanlink10}}">{{pengo?.bahan10}}</h4>
+      <p>{{pengo?.pengob10}}</p>
+    </ion-text>
+
+  </div>
+</ion-content>
